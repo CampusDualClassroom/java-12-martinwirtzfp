@@ -99,7 +99,7 @@ class CarTest {
 
     @Test
     @DisplayName("Verify that when the angle of the wheels changes, the current angle changes accordingly")
-    void testCarTurnSteeringWheel() {
+    void testCarTurnAngleOfWheels() {
         myCar.start();
         int initialAngle = myCar.wheelsAngle;
         myCar.turnAngleOfWheels(20);
@@ -109,7 +109,7 @@ class CarTest {
 
     @Test
     @DisplayName("Verify that when wheels angle change, must be between -45º and 45º")
-    void testCarTurnSteeringWheelOutOfRange() {
+    void testCarTurnAngleOfWheelsOutOfRange() {
         myCar.start();
         myCar.turnAngleOfWheels(20);
         assertEquals(20, myCar.wheelsAngle);
